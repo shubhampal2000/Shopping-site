@@ -64,7 +64,7 @@ const Addproduct = () => {
         <label htmlFor="" className="w-full md:w-1/2 lg:w-1/2">
           <input type="file" value={image} onChange={e=>e.target.value}/>
         </label>
-        <button onClick={handleSubmit} className=" px-2 w-full md:w-1/2 lg:w-1/2  lg:rounded-sm  py-1 bg-blue-500 font-semibold text-white mt-2">
+        <button  className=" px-2 w-full md:w-1/2 lg:w-1/2  lg:rounded-sm  py-1 bg-blue-500 font-semibold text-white mt-2">
           Add Product
         </button>
       </form>

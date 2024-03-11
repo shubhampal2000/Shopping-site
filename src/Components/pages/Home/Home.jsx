@@ -5,9 +5,10 @@ import { FaSearch } from "react-icons/fa";
 import logo from "../../../Assets/Icons/logo.png";
 import { BiSolidCategory } from "react-icons/bi";
 import { FaHandsHelping } from "react-icons/fa";
-
 import { IoMdDownload } from "react-icons/io";
 const Home = () => {
+
+ 
   const [showoverlay, setShowoverlay] = useState(false);
   const [overlaydata, setOverlaydata] = useState();
 
@@ -129,7 +130,7 @@ const Home = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col gap-1 self-center w-[60%] mb-4">
+          <div className="flex flex-col gap-1 self-center w-[70%] mb-4">
             <button className="cursor-pointer rounded-lg px-1 py-1 w-full  hover:bg-white flex items-center gap-1 font-semibold ">
               {" "}
               <IoMdDownload />

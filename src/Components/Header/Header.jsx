@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
+
 const Header = () => {
 
     const[searchdata,setSearchdata]=useState();
     const[menubar,setMenubar]=useState(false)
-
+    const state = useSelector(state => state.cartReducer.noOfItemInCart)
+    console.log("cart is ",state);
 
   return (
     <>
@@ -20,7 +22,7 @@ const Header = () => {
             <li><NavLink className={(isActive)=>` ${isActive? " text-red-600":"text-black"} ` }  to="home"> HOME </NavLink>  </li>
             <li><NavLink to="addproduct" >ADD </NavLink> </li>
             <li><NavLink to="">SIGNUP</NavLink> </li>
-            <li><NavLink className='flex items-center gap-1'  to="addtocart"><FaCartPlus/> CART</NavLink> </li>
+            <li className=''><NavLink className='flex items-center gap-1'  to="addtocart"><FaCartPlus/> CART</NavLink> {state} </li>
         </ul>
     </span>
     <div className='md:hidden lg:hidden flex flex-col  border-solid'>
